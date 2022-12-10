@@ -1,0 +1,2 @@
+# ZTerminal
+The better CMD.
