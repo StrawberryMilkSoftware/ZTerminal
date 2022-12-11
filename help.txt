@@ -1,8 +1,8 @@
 ZTerminal can be confusing at times, so here is a guide.
 --==--==--==--==--==--==--==--==--==--==--==--==--==--
-echo - repeats a string back
+print - repeats a string back
 	syntax:
-	echo-string
+	print-string
 
 version - tells you your current zt version
 	syntax:
@@ -30,8 +30,42 @@ wincmd - runs wcp commands
 	syntax:
 	wincmd-command arg
 
-iptvar - puts input into the "ipt" var
+clear - clears the screen
 	syntax:
-	iptvar
+	clear
+
+pause - pauses until a key is pressed
+	syntax:
+	pause
+
+exit - closes ZTerminal
+	syntax:
+	exit
+
+ping - pings an ip address or website
+	syntax:
+	ping-ip
+
+title - changes the window title
+	syntax:
+	title-text
+
+call - calls a .zt file
+	syntax:
+	call-file
+
+delf - deletes a file
+	syntax:
+	delf-path\file
+
+deldir - deletes a directory
+	syntax:
+	deldir-path
+
+start - starts a program
+	syntax:
+	start-program
+
+
 
 
