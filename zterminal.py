@@ -1,11 +1,13 @@
 import os
 print("os imported")
 os.system("title Loading...")
+import chocoedit
+print("chocoedit imported")
 from time import strftime
 print("strftime imported")
 winuser=os.getlogin()
 print("Username retrieved")
-ztver="0.6"
+ztver="0.7"
 print("ztver defined")
 def entcmd():
     global cmd
@@ -65,6 +67,15 @@ def entcmd():
         entcmd()
     if "credits" in cmd:
         ztcredits()
+        entcmd()
+    if "choco" in cmd:
+        choco(cmd)
+        entcmd()
+    if "dir" in cmd:
+        dir(cmd)
+        entcmd()
+    if "tree" in cmd:
+        tree(cmd)
         entcmd()
     else:
         print(' %s is not a valid command. Use "help" for a list of all commands.' % cmd)
@@ -251,12 +262,29 @@ def start(cmd):
 
 print("start func loaded")
 
+def choco(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("choco")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        chocoedit.main(pgstr)
+    
+print("choco func loaded")
+
+
+
 def ztcredits():
     print("ZTerminal")
     print("by Strawberry Milk Software")
     print("Commands - Lilaf")
     print(".ZT Handler - Lilaf")
     print("Community QA - Jware/Revel")
+    print("ChocoEdit - Choco Software")
     print("Original Technology - Microsoft")
     print("and..")
     print("End-User - YOU!")
@@ -264,10 +292,34 @@ def ztcredits():
 
 print("ztcredits func loaded")
 
+def dir(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("dir")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        os.system("dir %s" % pgstr)
 
+print("dir func loaded")
 
+def tree(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("tree")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        os.system("tree %s" % pgstr)
 
-
+    
+print("tree func loaded")
 
 
 os.system("title ZTerminal")
