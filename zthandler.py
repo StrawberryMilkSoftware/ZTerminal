@@ -41,9 +41,6 @@ def entcmd():
     if "iptvar" in cmd:
         iptvar()
         entcmd()
-    if "prnvar" in cmd:
-        prnvar(cmd)
-        entcmd()
 
 print("entcmd func loaded")
 
@@ -120,15 +117,103 @@ def iptvar():
 
 print("iptvar func loaded")
 
-def prnvar():
-    pecstr=cmd.split("-")
-    pecstr.remove("print")
-    ecstr=(pecstr)[1:-1]
-    ecstr=ecstr.replace("'","")
-    ecstr=ecstr.replace("'","")
-    print(ecstr)
+def clear():
+    os.system("cls")
 
-print("prnvar func loaded")
+print("clear func loaded")
+
+def pause():
+    input("Press any key to continue")
+
+print("pause func loaded")
+
+def exit():
+    os.system("exit")
+
+print("exit func loaded")
+
+def ping(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("ping")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("ping "+pgstr)
+
+print("ping func loaded")
+
+def title(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("title")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("title "+pgstr)
+
+print("title func loaded")
+
+
+def call(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("call")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("zthandler.exe "+pgstr)
+
+print("call func loaded")
+
+
+def delf(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("delf")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("del "+pgstr)
+
+print("delf func loaded")
+
+
+def deldir(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("deldir")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("rd "+pgstr)
+
+print("deldir func loaded")
+
+def start(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("start")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    os.system("start "+pgstr)
+
+print("start func loaded")
+
+def ztcredits():
+    print("ZTerminal")
+    print("by Strawberry Milk Software")
+    print("Commands - Lilaf")
+    print(".ZT Handler - Lilaf")
+    print("Community QA - Jware/Revel")
+    print("Original Technology - Microsoft")
+    print("and..")
+    print("End-User - YOU!")
+    print("Thanks for choosing ZTerminal!")
+
+print("ztcredits func loaded")
+
 
 os.system("cls")
 
@@ -159,4 +244,24 @@ for line in lines:
         wincmd(line)
     if "iptvar" in line:
         iptvar()
+    if "clear" in line:
+        clear()
+    if "pause" in line:
+        pause()
+    if "exit" in line:
+        exit()
+    if "ping" in line:
+        ping(line)
+    if "title" in line:
+        title(line)
+    if "call" in line:
+        call(line)
+    if "delf" in line:
+        delf(line)
+    if "deldir" in line:
+        deldir(line)
+    if "start" in line:
+        start(line)
+    if "credits" in line:
+        ztcredits(line)
 
