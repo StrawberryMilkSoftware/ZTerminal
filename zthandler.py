@@ -214,6 +214,35 @@ def ztcredits():
 
 print("ztcredits func loaded")
 
+def dir(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("dir")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        os.system("dir %s" % pgstr)
+
+print("dir func loaded")
+
+def tree(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("tree")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        os.system("tree %s" % pgstr)
+
+    
+print("tree func loaded")
+
 
 os.system("cls")
 
@@ -264,4 +293,9 @@ for line in lines:
         start(line)
     if "credits" in line:
         ztcredits(line)
+    if "dir" in line:
+        dir(line)
+    if "tree" in line:
+        tree(line)
+        
 
