@@ -17,8 +17,17 @@
 - Credited Jware/Revel for Community QA
 - Added beta message
 
-### Upcoming: ZTPB-BN.2 v0.7
+## ZTPB-BN.2 v0.7
+- Integrated chocoedit with choco command
+- Added tree command
+- Added dir command
+- Credited Choco Software for chocoedit
+
+### Upcoming: ZTPB-BN.2 v0.8
+- Add plugin support
+- Add input command
+
+### Cancelled:
 - Integrate zthandler into zterminal
-- Add user support
-- Add dir command
-- Add tree command
+- Add user functionality
+- Add cowsay command
