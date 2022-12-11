@@ -1,8 +1,15 @@
 ZTerminal can be confusing at times, so here is a guide.
+
+
+How to use ZT files:
+Drag and drop a .zt file onto zthandler.exe.
+
+
+COMMANDS:
 --==--==--==--==--==--==--==--==--==--==--==--==--==--
-print - repeats a string back
+echo - repeats a string back
 	syntax:
-	print-string
+	echo-string
 
 version - tells you your current zt version
 	syntax:
@@ -29,6 +36,7 @@ time - tells the time
 wincmd - runs wcp commands
 	syntax:
 	wincmd-command arg
+
 
 clear - clears the screen
 	syntax:
@@ -66,6 +74,17 @@ start - starts a program
 	syntax:
 	start-program
 
+choco - edits with ChocoEdit
+	syntax:
+	choco-path\file
+
+dir - lists contents of a dir
+	syntax:
+	dir-path
+
+tree - lists contents of a dir with a graphic
+	syntax:
+	tree-path
 
 
 
