@@ -1,0 +1,37 @@
+ZTerminal can be confusing at times, so here is a guide.
+--==--==--==--==--==--==--==--==--==--==--==--==--==--
+echo - repeats a string back
+	syntax:
+	echo-string
+
+version - tells you your current zt version
+	syntax:
+	version
+	or
+	ver
+
+wv - tells you your current windows version
+	syntax:
+	wv
+
+ndir - creates a directory
+	syntax:
+	ndir-dirname
+
+tofile - puts content into a file
+	syntax:
+	tofile-path\filename-content
+
+time - tells the time
+	syntax:
+	time
+
+wincmd - runs wcp commands
+	syntax:
+	wincmd-command arg
+
+iptvar - puts input into the "ipt" var
+	syntax:
+	iptvar
+
+
