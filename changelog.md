@@ -23,11 +23,21 @@
 - Added dir command
 - Credited Choco Software for chocoedit
 
-### Upcoming: ZTPB-BN.2 v0.8
+## ZTerminal v1.0
+- Left Post-beta stage of development
+- Changed readme.md
+- Changed `wincmd` to `oscmd`
+- Removed `call` command due to errors
+- Added support to change current working directory using `cd` command
+- Added `printcd` command
+
+### Upcoming: ZTerminal v1.1
 - Add plugin support
-- Add input command
+- Add batch file support
+
 
 ### Cancelled:
 - Integrate zthandler into zterminal
 - Add user functionality
 - Add cowsay command
+- Add input command

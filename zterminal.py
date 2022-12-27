@@ -7,12 +7,15 @@ from time import strftime
 print("strftime imported")
 winuser=os.getlogin()
 print("Username retrieved")
-ztver="0.7"
+ztver="ZTerminal v1.0"
 print("ztver defined")
 def entcmd():
     global cmd
     cmd=input(ztver+" "+winuser+" > ")
-    if "print" in cmd:
+    if "printcd" in cmd:
+        printcd()
+        entcmd()
+    elif "print" in cmd:
         printzt(cmd)
         entcmd()
     if "version" in cmd:
@@ -36,7 +39,7 @@ def entcmd():
     if "help" in cmd:
         help()
         entcmd()
-    if "wincmd" in cmd:
+    if "oscmd" in cmd:
         wincmd(cmd)
         entcmd()
     if "clear" in cmd:
@@ -52,9 +55,6 @@ def entcmd():
         entcmd()
     if "title" in cmd:
         title(cmd)
-        entcmd()
-    if "call" in cmd:
-        call(cmd)
         entcmd()
     if "delf" in cmd:
         delf(cmd)
@@ -76,6 +76,9 @@ def entcmd():
         entcmd()
     if "tree" in cmd:
         tree(cmd)
+        entcmd()
+    if "cd" in cmd:
+        cd(cmd)
         entcmd()
     else:
         print(' %s is not a valid command. Use "help" for a list of all commands.' % cmd)
@@ -141,14 +144,14 @@ def time():
 print("time func loaded")
 
 def help():
-    hf = open("help.txt", "r")
+    hf = open("help.md", "r")
     print(hf.read())
 
 print("help func loaded")
 
 def wincmd(cmd):
     pwcstr=cmd.split("-")
-    pwcstr.remove("wincmd")
+    pwcstr.remove("oscmd")
     pwcstr=str(pwcstr)[1:-1]
     wcstr=str(pwcstr)
     wcstr=wcstr.replace("'","")
@@ -204,17 +207,6 @@ def title(cmd):
 print("title func loaded")
 
 
-def call(cmd):
-    ppgstr=cmd.split("-")
-    ppgstr.remove("call")
-    ppgstr=str(ppgstr)[1:-1]
-    pgstr=str(ppgstr)
-    pgstr=pgstr.replace("'","")
-    pgstr=pgstr.replace("'","")
-    if pgstr=="":
-        print(" Syntax error. pgstr not defined.")
-    else:
-        os.system("zthandler.exe "+pgstr)
 
 print("call func loaded")
 
@@ -283,9 +275,10 @@ def ztcredits():
     print("by Strawberry Milk Software")
     print("Commands - Lilaf")
     print(".ZT Handler - Lilaf")
-    print("Community QA - Jware/Revel")
-    print("ChocoEdit - Choco Software")
+    print("QA - Jware/Revel")
+    print("ChocoEdit - Choco Software (now owned by SMSoftware)")
     print("Original Technology - Microsoft")
+    print("Open-source hosting - GitHub")
     print("and..")
     print("End-User - YOU!")
     print("Thanks for choosing ZTerminal!")
@@ -318,6 +311,25 @@ def tree(cmd):
     else:
         os.system("tree %s" % pgstr)
 
+def cd(cmd):
+    ppgstr=cmd.split("-")
+    ppgstr.remove("cd")
+    ppgstr=str(ppgstr)[1:-1]
+    pgstr=str(ppgstr)
+    pgstr=pgstr.replace("'","")
+    pgstr=pgstr.replace("'","")
+    if pgstr=="":
+        print(" Syntax error. pgstr not defined.")
+    else:
+        try:
+            os.chdir(pgstr)
+        except:
+            print("Directory not found")
+
+def printcd():
+    print(os.getcwd())
+
+
     
 print("tree func loaded")
 
@@ -329,6 +341,6 @@ os.system("cls")
 
 #main
 print("You are currently using the POST-BETA version of ZTerminal, meaning that changes may occur. Please do not expect everything to stay in the full release of ZTerminal.")
-print("ZTerminal ZTPB-BN.2 v%s" % ztver)
+print(ztver)
 entcmd()
 

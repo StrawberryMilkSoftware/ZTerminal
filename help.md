@@ -102,3 +102,13 @@ dir-<path>
 lists contents of a dir with a graphic
 syntax
 tree-<path>
+
+## cd
+change current directory
+syntax
+cd-<path>
+
+## printcd
+print the current directory
+syntax
+printcd
