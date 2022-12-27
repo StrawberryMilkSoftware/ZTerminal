@@ -2,89 +2,83 @@ ZTerminal can be confusing at times, so here is a guide.
 
 
 How to use ZT files:
-Drag and drop a .zt file onto zthandler.exe.
+open cmd and type `python zthandler.py <your .zt file>`
+
+print prints to the console.
+Syntax
+print-<text>
+
+ver/version prints the version of zterminal.
+syntax
+ver
+version
+
+wv opens winver to show your windows version
+syntax
+wv
+
+ndir makes a new folder/directory
+syntax
+ndir-<name>
+
+tofile puts content into a file
+syntax
+tofile-<path>\<filename>-<content>
+
+time tells time
+syntax
+time
+
+wincmd run windows cmds
+syntax
+wincmd-<cmd> <arg>(if cmd needs it)
+
+clear clears the screen
+syntax
+clear
+
+pause pauses until a key is pressed
+syntax
+pause
+
+exit closes ZTerminal
+syntax
+exit
 
 
-COMMANDS:
---==--==--==--==--==--==--==--==--==--==--==--==--==--
-echo - repeats a string back
-	syntax:
-	echo-string
-
-version - tells you your current zt version
-	syntax:
-	version
-	or
-	ver
-
-wv - tells you your current windows version
-	syntax:
-	wv
-
-ndir - creates a directory
-	syntax:
-	ndir-dirname
-
-tofile - puts content into a file
-	syntax:
-	tofile-path\filename-content
-
-time - tells the time
-	syntax:
-	time
-
-wincmd - runs wcp commands
-	syntax:
-	wincmd-command arg
+ping pings an ip address or website
+syntax
+ping-<ip/url>
 
 
-clear - clears the screen
-	syntax:
-	clear
+title changes the window title
+syntax
+title-<text>
 
-pause - pauses until a key is pressed
-	syntax:
-	pause
+call calls a .zt file
+syntax
+call-<file>
 
-exit - closes ZTerminal
-	syntax:
-	exit
+delf deletes a file
+syntax
+delf-<path>\<file>
 
-ping - pings an ip address or website
-	syntax:
-	ping-ip
+deldir deletes a directory
+syntax
+deldir-<path>
 
-title - changes the window title
-	syntax:
-	title-text
+start starts a program
+syntax
+start-<program>
 
-call - calls a .zt file
-	syntax:
-	call-file
+choco edits with ChocoEdit
+syntax
+choco-<path>\<file>
 
-delf - deletes a file
-	syntax:
-	delf-path\file
+dir lists contents of a dir
+syntax
+dir-<path>
 
-deldir - deletes a directory
-	syntax:
-	deldir-path
-
-start - starts a program
-	syntax:
-	start-program
-
-choco - edits with ChocoEdit
-	syntax:
-	choco-path\file
-
-dir - lists contents of a dir
-	syntax:
-	dir-path
-
-tree - lists contents of a dir with a graphic
-	syntax:
-	tree-path
-
-
-
+tree lists contents of a dir with a graphic
+syntax
+tree-<path>
