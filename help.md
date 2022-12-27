@@ -1,7 +1,7 @@
 # ZTerminal can be confusing at times, so here is a guide.
 
 
-How to use files with the ZTerminal Shell Script/ZTSS language:
+### How to use files with the ZTerminal Shell Script/ZTSS language:
 Find the `zthandler.py` file and drag your file over it. If it has no errors, the file will run.
 
 
