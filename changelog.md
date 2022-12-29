@@ -31,6 +31,12 @@
 - Added support to change current working directory using `cd` command
 - Added `printcd` command
 
+## ZTerminal v1.0.1
+- Removed post-beta warning text
+- Fixed `ztver` command
+- Fixed `help.md` error with ver command
+- Added copyright message
+
 ### Upcoming: ZTerminal v1.1
 - Add plugin support
 - Add batch file support

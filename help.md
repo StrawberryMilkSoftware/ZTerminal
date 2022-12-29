@@ -10,7 +10,7 @@ prints to the console.
 Syntax
 print-<text>
 
-## ver/version
+## ver
 prints the version of zterminal.
 syntax
 ver

@@ -6,8 +6,8 @@ print("chocoedit imported")
 from time import strftime
 print("strftime imported")
 winuser=os.getlogin()
-print("Username retrieved")
-ztver="ZTerminal v1.0"
+print("username retrieved")
+ztver="ZTerminal v1.0.1"
 print("ztver defined")
 def entcmd():
     global cmd
@@ -100,7 +100,7 @@ def printzt(cmd):
 print("echo func loaded")
 
 def ver():
-    print(" Your current version of ZTerminal is version ZTPB-BN.2 v%s" % ztver)
+    print(" Your current version of ZTerminal is %s" % ztver)
 
 print("ver func loaded")
 
@@ -340,7 +340,7 @@ os.system("cls")
 
 
 #main
-print("You are currently using the POST-BETA version of ZTerminal, meaning that changes may occur. Please do not expect everything to stay in the full release of ZTerminal.")
+print("ZTerminal - Copyright (c) 2022 Strawberry Milk Software")
 print(ztver)
 entcmd()
 
