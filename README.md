@@ -12,7 +12,7 @@ ZTSS is a language inspired by Batch and Bash.
 It has everything you can do in ZTerminal,
 but fully automated where you can perfectly run
 scripts without having to type them in
-###### over, and over, and over again.
+### over, and over, and over again.
 
 ### So what are you waiting for?
 Download ZTerminal now and get ready to
