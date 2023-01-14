@@ -318,6 +318,8 @@ def cd(cmd):
     pgstr=str(ppgstr)
     pgstr=pgstr.replace("'","")
     pgstr=pgstr.replace("'","")
+    if "~" in pgstr:
+        pgstr=pgstr.replace("~", "/home/%s" % winuser)
     if pgstr=="":
         print(" Syntax error. pgstr not defined.")
     else:
