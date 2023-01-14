@@ -47,7 +47,7 @@ def main(stdscr):
     elif ch == curses.KEY_DOWN and r < len(b)-1: r += 1
     rw = b[r] if r < len(b) else None; rwlen = len(rw) if rw is not None else 0
     if c > rwlen: c = rwlen 
-    if ch == (ord('q') & 0x1f): sys.exit()
+    if ch == (ord('q') & 0x1f): eval("entcmd()")
     elif ch == (ord('s') & 0x1f):
       cont = ''
       for l in b: cont += ''.join([chr(c) for c in l]) + '\n'
