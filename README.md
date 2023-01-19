@@ -21,7 +21,3 @@ unleash your computer's greatness.
 ### Credits
 ZTerminal (ZT) is open-source software owned by
 Strawberry Milk Software under the MIT license (read more in the LICENSE file).
-
-ChocoEdit, software bundled into ZTerminal was previously
-owned by Choco Software, which was acquired by Strawberry Milk Software on
-December 26, 2022.
